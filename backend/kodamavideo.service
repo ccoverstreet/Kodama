@@ -1,0 +1,12 @@
+[Unit]
+Description="Kodama WiFi Robot"
+Wants=network.target
+
+[Service]
+Type=simple
+User=kodama
+ExecStart=/home/kodama/backend/video_server.py
+
+[Install]
+WantedBy=multi-user.target
+

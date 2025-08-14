@@ -1,0 +1,13 @@
+[Unit]
+Description="Kodama WiFi Robot"
+Wants=network.target
+
+[Service]
+Type=simple
+User=kodama
+ExecStart=/home/kodama/backend/control_server.py
+WorkingDirectory=/home/kodama/backend
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,12 @@
+[Unit]
+Description="Kodama WiFi Robot"
+Wants=network.target
+
+[Service]
+Type=simple
+User=kodama
+ExecStart=python -m http.server 8080 -d /home/kodama/frontend/build
+
+[Install]
+WantedBy=multi-user.target
+
