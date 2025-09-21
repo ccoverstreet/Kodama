@@ -10,8 +10,8 @@ kit = ServoKit(channels=16)
 
 
 zero_offset = 0.05
-left_offset = 0.053
-right_offset = 0.06
+left_offset = 0.04
+right_offset = 0.05
 
 def clamp(val, lower, upper):
     return min([max([val, lower]), upper])
