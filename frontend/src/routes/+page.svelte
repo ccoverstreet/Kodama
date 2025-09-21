@@ -113,10 +113,10 @@
 		const dx = (layerx - centerx) / centerx;
 		const dy = -1 * (layery - centery) / centery;
 
-		const leftThrottle = clamp(dy + dx, -1, 1)
-		const rightThrottle = clamp(dy - dx, -1, 1)
+		const leftThrottle = Math.pow(clamp(dy + dx, -1, 1), 3)
+		const rightThrottle = Math.pow(clamp(dy - dx, -1, 1), 3)
 
-
+		controlState.throttleMult = 1.0;
 		controlState.leftThrottle = leftThrottle;
 		controlState.rightThrottle = rightThrottle;
 		if (joystickOn) {
